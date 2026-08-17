@@ -1,0 +1,161 @@
+ninja: no work to do.
+[1/11] Running utility command for SdrTransmit_dictionary
+-- Install configuration: ""
+-- Up-to-date: /home/ethant/Projects/lioness-sdr/build-artifacts/Linux/SdrTransmit/dict/SdrTransmitTopologyDictionary.json
+[2/11] Building CXX object LionessSdr/Components/GmskModulator/CMakeFiles/LionessSdr_Components_GmskModulator.dir/GmskModulator.cpp.o
+FAILED: LionessSdr/Components/GmskModulator/CMakeFiles/LionessSdr_Components_GmskModulator.dir/GmskModulator.cpp.o 
+/usr/bin/c++ -DTGT_OS_TYPE_LINUX -I/home/ethant/Projects/lioness-sdr/lib/fprime -I/home/ethant/Projects/lioness-sdr -I/home/ethant/Projects/lioness-sdr/build-fprime-automatic-native -I/home/ethant/Projects/lioness-sdr/build-fprime-automatic-native/F-Prime -I/home/ethant/Projects/lioness-sdr/build-fprime-automatic-native/cmake/platform/unix/Platform/.. -I/home/ethant/Projects/lioness-sdr/build-fprime-automatic-native/.. -I/home/ethant/Projects/lioness-sdr/build-fprime-automatic-native/F-Prime/default/config/.. -std=c++14 -DASSERT_FILE_ID=0x5f7b0690 -DASSERT_RELATIVE_PATH='"LionessSdr/Components/GmskModulator/GmskModulator.cpp"' -MD -MT LionessSdr/Components/GmskModulator/CMakeFiles/LionessSdr_Components_GmskModulator.dir/GmskModulator.cpp.o -MF LionessSdr/Components/GmskModulator/CMakeFiles/LionessSdr_Components_GmskModulator.dir/GmskModulator.cpp.o.d -o LionessSdr/Components/GmskModulator/CMakeFiles/LionessSdr_Components_GmskModulator.dir/GmskModulator.cpp.o -c /home/ethant/Projects/lioness-sdr/LionessSdr/Components/GmskModulator/GmskModulator.cpp
+In file included from /home/ethant/Projects/lioness-sdr/LionessSdr/Components/GmskModulator/GmskModulator.hpp:10,
+                 from /home/ethant/Projects/lioness-sdr/LionessSdr/Components/GmskModulator/GmskModulator.cpp:7:
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:78:16: error: expected unqualified-id before string constant
+   78 |                "Use serializeTo(SerialBufferBase& buffer) instead") {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:83:16: error: expected unqualified-id before string constant
+   83 |                "Use deserializeFrom(SerialBufferBase& buffer) instead") {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1086:16: error: expected unqualified-id before string constant
+ 1086 |                "Use serializeFrom(const SerialBufferBase& val) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1087:68: error: expected unqualified-id before string constant
+ 1087 |     DEPRECATED(SerializeStatus deserialize(LinearBufferBase& val), "Use deserializeTo(SerialBufferBase& val) instead");
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1148:64: error: expected unqualified-id before string constant
+ 1148 |     DEPRECATED(Serializable::SizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1149:62: error: expected unqualified-id before string constant
+ 1149 |     DEPRECATED(Serializable::SizeType getBuffLength() const, "Use getSize() instead");
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1150:54: error: expected unqualified-id before string constant
+ 1150 |     DEPRECATED(Serializable::SizeType getBuffLeft(), "Use getDeserializeSizeLeft() instead");
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1273:51: error: expected unqualified-id before string constant
+ 1273 |     DEPRECATED(SerializeStatus serialize(U8 val), "Use serializeFrom(U8 val) instead");
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1274:51: error: expected unqualified-id before string constant
+ 1274 |     DEPRECATED(SerializeStatus serialize(I8 val), "Use serializeFrom(I8 val) instead");
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1276:52: error: expected unqualified-id before string constant
+ 1276 |     DEPRECATED(SerializeStatus serialize(U16 val), "Use serializeFrom(U16 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1277:52: error: expected unqualified-id before string constant
+ 1277 |     DEPRECATED(SerializeStatus serialize(I16 val), "Use serializeFrom(I16 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1280:52: error: expected unqualified-id before string constant
+ 1280 |     DEPRECATED(SerializeStatus serialize(U32 val), "Use serializeFrom(U32 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1281:52: error: expected unqualified-id before string constant
+ 1281 |     DEPRECATED(SerializeStatus serialize(I32 val), "Use serializeFrom(I32 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1284:52: error: expected unqualified-id before string constant
+ 1284 |     DEPRECATED(SerializeStatus serialize(U64 val), "Use serializeFrom(U64 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1285:52: error: expected unqualified-id before string constant
+ 1285 |     DEPRECATED(SerializeStatus serialize(I64 val), "Use serializeFrom(I64 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1288:52: error: expected unqualified-id before string constant
+ 1288 |     DEPRECATED(SerializeStatus serialize(F32 val), "Use serializeFrom(F32 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1289:52: error: expected unqualified-id before string constant
+ 1289 |     DEPRECATED(SerializeStatus serialize(F64 val), "Use serializeFrom(F64 val) instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1290:53: error: expected unqualified-id before string constant
+ 1290 |     DEPRECATED(SerializeStatus serialize(bool val), "Use serializeFrom(bool val) instead");
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1291:60: error: expected unqualified-id before string constant
+ 1291 |     DEPRECATED(SerializeStatus serialize(const void* val), "Use serializeFrom(const void* val) instead");
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1293:16: error: expected unqualified-id before string constant
+ 1293 |                "Use serialize(const U8* buff, FwSizeType length, Serialization::t mode) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1295:16: error: expected unqualified-id before string constant
+ 1295 |                "Use serializeFrom(const U8* buff, FwSizeType length) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1297:16: error: expected unqualified-id before string constant
+ 1297 |                "Use serializeFrom(const U8* buff, FwSizeType length, Serialization::t mode) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1299:16: error: expected unqualified-id before string constant
+ 1299 |                "Use serializeFrom(const Serializable& val) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1301:54: error: expected unqualified-id before string constant
+ 1301 |     DEPRECATED(SerializeStatus deserialize(U8& val), "Use deserializeTo(U8& val) instead");
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1302:54: error: expected unqualified-id before string constant
+ 1302 |     DEPRECATED(SerializeStatus deserialize(I8& val), "Use deserializeTo(I8& val) instead");
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1304:55: error: expected unqualified-id before string constant
+ 1304 |     DEPRECATED(SerializeStatus deserialize(U16& val), "Use deserializeTo(U16& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1305:55: error: expected unqualified-id before string constant
+ 1305 |     DEPRECATED(SerializeStatus deserialize(I16& val), "Use deserializeTo(I16& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1308:55: error: expected unqualified-id before string constant
+ 1308 |     DEPRECATED(SerializeStatus deserialize(U32& val), "Use deserializeTo(U32& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1309:55: error: expected unqualified-id before string constant
+ 1309 |     DEPRECATED(SerializeStatus deserialize(I32& val), "Use deserializeTo(I32& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1312:55: error: expected unqualified-id before string constant
+ 1312 |     DEPRECATED(SerializeStatus deserialize(U64& val), "Use deserializeTo(U64& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1313:55: error: expected unqualified-id before string constant
+ 1313 |     DEPRECATED(SerializeStatus deserialize(I64& val), "Use deserializeTo(I64& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1316:55: error: expected unqualified-id before string constant
+ 1316 |     DEPRECATED(SerializeStatus deserialize(F32& val), "Use deserializeTo(F32& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1317:55: error: expected unqualified-id before string constant
+ 1317 |     DEPRECATED(SerializeStatus deserialize(F64& val), "Use deserializeTo(F64& val) instead");
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1318:56: error: expected unqualified-id before string constant
+ 1318 |     DEPRECATED(SerializeStatus deserialize(bool& val), "Use deserializeTo(bool& val) instead");
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1319:57: error: expected unqualified-id before string constant
+ 1319 |     DEPRECATED(SerializeStatus deserialize(void*& val), "Use deserializeTo(void*& val) instead");
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1321:16: error: expected unqualified-id before string constant
+ 1321 |                "Use deserialize(U8* buff, FwSizeType& length, Serialization::t mode) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1323:16: error: expected unqualified-id before string constant
+ 1323 |                "Use deserializeTo(U8* buff, FwSizeType& length) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1325:16: error: expected unqualified-id before string constant
+ 1325 |                "Use deserializeTo(U8* buff, FwSizeType& length, Serialization::t mode) instead");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1326:64: error: expected unqualified-id before string constant
+ 1326 |     DEPRECATED(SerializeStatus deserialize(Serializable& val), "Use deserializeTo(Serializable& val) instead");
+      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/Serializable.hpp:1440:64: error: expected unqualified-id before string constant
+ 1440 |     DEPRECATED(Serializable::SizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/ConstStringBase.hpp:76:16: error: expected unqualified-id before string constant
+   76 |                "Use serializeTo(SerializeBufferBase& buffer) instead") {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Types/ConstStringBase.hpp:81:16: error: expected unqualified-id before string constant
+   81 |                "Use serializeTo(SerializeBufferBase& buffer, SizeType maxLen) instead") {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Buffer/Buffer.hpp:110:57: error: expected unqualified-id before string constant
+  110 |     DEPRECATED(SerializeBufferBase& getSerializeRepr(), "Switch to .getSerializer() and .getDeserializer()");
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Cmd/CmdArgBuffer.hpp:34:52: error: expected unqualified-id before string constant
+   34 |     DEPRECATED(FwSizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Os/Task.hpp:282:16: error: expected unqualified-id before string constant
+  282 |                "Switch to Task::start(Arguments&)");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Os/Task.hpp:312:47: error: expected unqualified-id before string constant
+  312 |     DEPRECATED(Status join(void** value_ptr), "Please switch to argument free join.");
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Comp/ActiveComponentBase.hpp:30:16: error: expected unqualified-id before string constant
+   30 |                "Switch to .join()");  //!< Join to thread with discarded value_ptr
+      |                ^~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Log/LogBuffer.hpp:31:52: error: expected unqualified-id before string constant
+   31 |     DEPRECATED(FwSizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Prm/PrmBuffer.hpp:39:52: error: expected unqualified-id before string constant
+   39 |     DEPRECATED(FwSizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ethant/Projects/lioness-sdr/lib/fprime/Fw/Tlm/TlmBuffer.hpp:30:52: error: expected unqualified-id before string constant
+   30 |     DEPRECATED(FwSizeType getBuffCapacity() const, "Use getCapacity() instead");
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.
+[ERROR] CMake erred with return code 1

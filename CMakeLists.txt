@@ -16,4 +16,9 @@ fprime_setup_included_code()
 
 
 # This includes project-wide objects
+find_library(LIQUID_LIB liquid REQUIRED)
+find_library(RTLSDR_LIB rtlsdr REQUIRED)
+
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/LionessSdr")
+add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/SdrTransmit/")
+add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/SdrReceive/")
