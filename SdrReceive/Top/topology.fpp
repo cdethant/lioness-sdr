@@ -88,7 +88,7 @@ module SdrReceive {
       ComCcsds.comStub.drvReceiveReturnOut -> comDriver.recvReturnIn
       
       # ComStub <-> ComDriver (Downlink)
-      # ComCcsds.comStub.drvSendOut      -> comDriver.$send
+      ComCcsds.comStub.drvSendOut      -> comDriver.$send
       comDriver.ready         -> ComCcsds.comStub.drvConnected
     }
 
