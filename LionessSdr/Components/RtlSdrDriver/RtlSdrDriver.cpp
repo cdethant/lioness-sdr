@@ -94,42 +94,46 @@ void RtlSdrDriver ::dataReturnIn_handler(FwIndexType portNum, Fw::Buffer& fwBuff
 // Handler implementations for commands
 // ----------------------------------------------------------------------
 
-void RtlSdrDriver ::ENABLE_RX_cmdHandler(FwOpcodeType opCode, U32 cmdSeq, Fw::On enable) {
-    if (enable == Fw::On::ON) {
-        if (m_dev == nullptr) {
-            int ret = rtlsdr_open(&m_dev, 0);
-            if (ret < 0) {
-                log_WARNING_HI_RtlSdrConfigError(Fw::String("0"), ret);
-                this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::EXECUTION_ERROR);
-                return;
-            }
-            
-            // Configure initial parameters
-            parametersLoaded();
-            rtlsdr_reset_buffer(m_dev);
-
-            // Start the background thread
-            Os::Task::Status status = m_rxTask.start(Fw::String("RtlSdrRx"), rxTaskEntry, this, 40);
-            if (status != Os::Task::OP_OK) {
-                rtlsdr_close(m_dev);
-                m_dev = nullptr;
-                this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::EXECUTION_ERROR);
-                return;
-            }
-
-            log_ACTIVITY_HI_Configured(Fw::String("0"));
-            
-            if (isConnected_ready_OutputPort(0)) {
-                ready_out(0);
-            }
+bool RtlSdrDriver ::setup() {
+    if (m_dev == nullptr) {
+        int ret = rtlsdr_open(&m_dev, 0);
+        if (ret < 0) {
+            log_WARNING_HI_RtlSdrConfigError(Fw::String("0"), ret);
+            return false;
         }
-    } else {
+        
+        // Configure initial parameters
+        parametersLoaded();
+        rtlsdr_reset_buffer(m_dev);
+
+        // Start the background thread
+        Os::Task::Status status = m_rxTask.start(Fw::String("RtlSdrRx"), rxTaskEntry, this, 40);
+        if (status != Os::Task::OP_OK) {
+            rtlsdr_close(m_dev);
+            m_dev = nullptr;
+            return false;
+        }
+
+        log_ACTIVITY_HI_Configured(Fw::String("0"));
+        
+        if (isConnected_ready_OutputPort(0)) {
+            ready_out(0);
+        }
+    }
+    return true;
+}
+
+void RtlSdrDriver ::ENABLE_RX_cmdHandler(FwOpcodeType opCode, U32 cmdSeq, Fw::On enable) {
+    if (enable == Fw::On::OFF) {
         if (m_dev != nullptr) {
             rtlsdr_cancel_async(m_dev);
             m_rxTask.join();
             rtlsdr_close(m_dev);
             m_dev = nullptr;
         }
+    } else {
+        // If they send ON again, try to start it if it was stopped
+        this->setup();
     }
 
     this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);

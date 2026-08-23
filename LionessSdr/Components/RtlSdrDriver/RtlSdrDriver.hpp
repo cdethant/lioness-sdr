@@ -26,6 +26,10 @@ class RtlSdrDriver final : public RtlSdrDriverComponentBase {
     //! Destroy RtlSdrDriver object
     ~RtlSdrDriver();
 
+    //! Initialize the RTL-SDR hardware and start the receive task
+    //! \return true if successful, false otherwise
+    bool setup();
+
     //! Parameter loaded handler
     void parametersLoaded() override;
 

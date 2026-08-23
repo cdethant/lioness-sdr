@@ -71,6 +71,10 @@ void setupTopology(const TopologyState& state) {
     loadParameters();
     // Autocoded task kick-off (active components). Function provided by autocoder.
     startTasks(state);
+    
+    // Auto-start the RTL-SDR receiver
+    rtlSdrDriver.setup();
+    
     // Initialize socket communication if and only if there is a valid specification
     if (state.hostname != nullptr && state.port != 0) {
         Os::TaskString name("ReceiveTask");
