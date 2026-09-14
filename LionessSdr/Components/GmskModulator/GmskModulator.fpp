@@ -27,7 +27,7 @@ module LionessSdr {
         param SAMPLE_RATE: U32 default 2000000
 
         @ Symbol Rate in Hz
-        param SYMBOL_RATE: U32 default 100000
+        param SYMBOL_RATE: U32 default 20000
 
         @ BT Product (Gaussian filter bandwidth times symbol rate)
         param BT: F32 default 0.3
